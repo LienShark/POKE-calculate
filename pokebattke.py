@@ -113,6 +113,8 @@ else:
 	print(NameD,"很爛，全輸")
 print()
 
+print('試試看')
+
 
 
 
