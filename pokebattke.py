@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import random
+from tkinter import Y
 
 
 A=[202,200,116,169,100,15,4,15,4]
@@ -23,8 +24,8 @@ def type (A,B):
 	return x3
 	
 	
-def damage(X):
-	return (0.44*(X[1]/X[2])*(X[4])+2)
+def damage(X,Y):
+	return (0.44*(X[1]/Y[2])*(X[4])+2)
 
 def FFF (P1,P2):
 	Ia=0
@@ -33,11 +34,11 @@ def FFF (P1,P2):
 	hp2=P2[0]
 	Win=0
 	while hp1 > 0:
-		hp1=hp1-damage(P2)*type(P1,P2)
+		hp1=hp1-damage(P2,P1)*type(P1,P2)
 		Ia=Ia+1
 	
 	while hp2 > 0:
-		hp2=hp2-damage(P1)*type(P1,P2)
+		hp2=hp2-damage(P1,P2)*type(P1,P2)
 		Ib=Ib+1
 	
 	if P1[3] > P2[3]:
